@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#000;
+  color:white;
+  overflow-x:hidden;
+  font-family:Inter,sans-serif;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes scanner {
+
+  0%{
+    top:-10%;
+  }
+
+  100%{
+    top:110%;
+  }
+
+}
+
+@keyframes hologramGlow {
+
+  0%,100%{
+    opacity:0.4;
+  }
+
+  50%{
+    opacity:1;
+  }
+
+}
+
+@keyframes revealUp {
+
+  from{
+    opacity:0;
+    transform:translateY(80px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.scanner-line{
+  position:absolute;
+  left:0;
+  width:100%;
+  height:4px;
+  background:#4ade80;
+  box-shadow:
+  0 0 20px #4ade80,
+  0 0 40px #4ade80;
+  animation:scanner 2.5s linear infinite;
+}
+
+.hologram-glow{
+  animation:hologramGlow 2s infinite;
+}
+
+.reveal-up{
+  animation:revealUp 1s ease forwards;
+}
+
+@keyframes scanner {
+
+  0% {
+    top: -10%;
+  }
+
+  100% {
+    top: 110%;
+  }
+
+}
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    opacity: .4;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: .8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: .4;
+  }
+}
