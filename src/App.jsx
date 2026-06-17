@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 5000);
+    }, 9000); // Increased for business card animation
 
     return () => clearTimeout(timer);
   }, []);
