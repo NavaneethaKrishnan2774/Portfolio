@@ -14,6 +14,8 @@ export default function Projects() {
       className="py-24 lg:py-32 px-4 sm:px-6"
     >
       <div className="max-w-7xl mx-auto">
+        {/* Heading */}
+
         <div className="text-center mb-16 lg:mb-20">
           <p className="uppercase tracking-[0.4em] text-green-400">
             Portfolio
@@ -32,6 +34,8 @@ export default function Projects() {
           </h2>
         </div>
 
+        {/* Projects Grid */}
+
         <div
           className="
           grid
@@ -39,6 +43,7 @@ export default function Projects() {
           md:grid-cols-2
           xl:grid-cols-3
           gap-8
+          items-stretch
           "
         >
           {projects.map((project) => (
@@ -47,6 +52,9 @@ export default function Projects() {
               whileHover={{
                 y: -10,
               }}
+              transition={{
+                duration: 0.3,
+              }}
               className="
               bg-white/5
               border
@@ -54,8 +62,15 @@ export default function Projects() {
               rounded-[30px]
               overflow-hidden
               backdrop-blur-xl
+              flex
+              flex-col
+              h-full
+              hover:border-green-400/40
+              hover:shadow-[0_0_30px_rgba(74,222,128,0.15)]
               "
             >
+              {/* Project Image */}
+
               <img
                 src={project.image}
                 alt={project.title}
@@ -67,7 +82,16 @@ export default function Projects() {
                 "
               />
 
-              <div className="p-6">
+              {/* Content */}
+
+              <div
+                className="
+                p-6
+                flex
+                flex-col
+                flex-1
+                "
+              >
                 {project.featured && (
                   <span className="text-green-400">
                     ⭐ Featured
@@ -100,12 +124,14 @@ export default function Projects() {
                   {project.description}
                 </p>
 
+                {/* Button */}
+
                 <button
                   onClick={() =>
                     setSelectedProject(project)
                   }
                   className="
-                  mt-6
+                  mt-auto
                   w-full
                   px-5
                   py-3
@@ -114,7 +140,9 @@ export default function Projects() {
                   text-black
                   font-bold
                   hover:scale-105
-                  transition
+                  transition-all
+                  duration-300
+                  shadow-[0_0_20px_rgba(74,222,128,0.3)]
                   "
                 >
                   View Details
