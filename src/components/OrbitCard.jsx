@@ -43,8 +43,15 @@ export default function OrbitCard() {
       }}
       className="
       relative
-      w-[420px]
-      h-[560px]
+      w-[300px]
+      h-[400px]
+
+      sm:w-[350px]
+      sm:h-[460px]
+
+      lg:w-[420px]
+      lg:h-[560px]
+
       rounded-[40px]
       bg-white/5
       backdrop-blur-2xl
@@ -62,10 +69,10 @@ export default function OrbitCard() {
       <div
         className="
         absolute
-        -top-32
-        -left-32
-        w-72
-        h-72
+        -top-24
+        -left-24
+        w-60
+        h-60
         bg-green-500/20
         blur-3xl
         rounded-full
@@ -86,8 +93,16 @@ export default function OrbitCard() {
         <div
           className="
           absolute
-          w-[340px]
-          h-[340px]
+
+          w-[220px]
+          h-[220px]
+
+          sm:w-[280px]
+          sm:h-[280px]
+
+          lg:w-[340px]
+          lg:h-[340px]
+
           rounded-full
           border
           border-green-400/30
@@ -101,8 +116,16 @@ export default function OrbitCard() {
         <div
           className="
           absolute
-          w-[420px]
-          h-[420px]
+
+          w-[280px]
+          h-[280px]
+
+          sm:w-[340px]
+          sm:h-[340px]
+
+          lg:w-[420px]
+          lg:h-[420px]
+
           rounded-full
           border
           border-green-400/15
@@ -116,8 +139,16 @@ export default function OrbitCard() {
         <div
           className="
           absolute
-          w-[500px]
-          h-[500px]
+
+          w-[340px]
+          h-[340px]
+
+          sm:w-[420px]
+          sm:h-[420px]
+
+          lg:w-[500px]
+          lg:h-[500px]
+
           rounded-full
           border
           border-green-400/5
@@ -129,7 +160,7 @@ export default function OrbitCard() {
         />
       </div>
 
-      {/* Profile Picture */}
+      {/* Profile Image */}
 
       <div
         className="
@@ -142,7 +173,7 @@ export default function OrbitCard() {
       >
         <motion.div
           animate={{
-            y: [0, -12, 0],
+            y: [0, -10, 0],
           }}
           transition={{
             repeat: Infinity,
@@ -150,15 +181,27 @@ export default function OrbitCard() {
           }}
           className="
           relative
-          w-[280px]
-          h-[280px]
+
+          w-[180px]
+          h-[180px]
+
+          sm:w-[220px]
+          sm:h-[220px]
+
+          lg:w-[280px]
+          lg:h-[280px]
+
           rounded-full
           overflow-hidden
-          border-[6px]
+
+          border-[5px]
           border-green-400
-          ring-[18px]
+
+          ring-[12px]
+          lg:ring-[18px]
           ring-green-400/15
-          shadow-[0_0_100px_rgba(74,222,128,0.8)]
+
+          shadow-[0_0_80px_rgba(74,222,128,0.8)]
           "
         >
           <img
@@ -173,20 +216,28 @@ export default function OrbitCard() {
         </motion.div>
       </div>
 
-      {/* Bottom Text */}
+      {/* Bottom Content */}
 
       <div
         className="
         absolute
-        bottom-10
+
+        bottom-6
+        lg:bottom-10
+
         left-0
         right-0
+
         text-center
+        px-4
         "
       >
         <h3
           className="
-          text-3xl
+          text-xl
+          sm:text-2xl
+          lg:text-3xl
+
           font-bold
           text-white
           "
@@ -197,8 +248,12 @@ export default function OrbitCard() {
         <p
           className="
           text-gray-400
-          mt-3
-          text-lg
+
+          mt-2
+
+          text-sm
+          sm:text-base
+          lg:text-lg
           "
         >
           Python • Django • AI • ML

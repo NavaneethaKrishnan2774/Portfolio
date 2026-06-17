@@ -11,24 +11,42 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-32 px-6"
+      className="py-24 lg:py-32 px-4 sm:px-6"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center mb-16 lg:mb-20">
           <p className="uppercase tracking-[0.4em] text-green-400">
             Portfolio
           </p>
 
-          <h2 className="text-6xl font-black mt-4">
+          <h2
+            className="
+            text-4xl
+            sm:text-5xl
+            lg:text-6xl
+            font-black
+            mt-4
+            "
+          >
             Featured Projects
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div
+          className="
+          grid
+          grid-cols-1
+          md:grid-cols-2
+          xl:grid-cols-3
+          gap-8
+          "
+        >
           {projects.map((project) => (
             <motion.div
               key={project.id}
-              whileHover={{ y: -10 }}
+              whileHover={{
+                y: -10,
+              }}
               className="
               bg-white/5
               border
@@ -43,7 +61,8 @@ export default function Projects() {
                 alt={project.title}
                 className="
                 w-full
-                h-56
+                h-52
+                sm:h-56
                 object-cover
                 "
               />
@@ -55,15 +74,29 @@ export default function Projects() {
                   </span>
                 )}
 
-                <p className="mt-2 text-green-400">
+                <p className="mt-2 text-green-400 text-sm">
                   {project.category}
                 </p>
 
-                <h3 className="text-2xl font-bold mt-2">
+                <h3
+                  className="
+                  text-xl
+                  sm:text-2xl
+                  font-bold
+                  mt-2
+                  "
+                >
                   {project.title}
                 </h3>
 
-                <p className="text-gray-400 mt-4">
+                <p
+                  className="
+                  text-gray-400
+                  mt-4
+                  text-sm
+                  sm:text-base
+                  "
+                >
                   {project.description}
                 </p>
 
@@ -73,6 +106,7 @@ export default function Projects() {
                   }
                   className="
                   mt-6
+                  w-full
                   px-5
                   py-3
                   rounded-xl

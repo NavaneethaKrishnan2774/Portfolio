@@ -14,7 +14,6 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
 
-/* NEW IMPORT */
 import IntroReveal from "./components/IntroReveal";
 
 function App() {
@@ -23,7 +22,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 5000); // 5 second intro
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);

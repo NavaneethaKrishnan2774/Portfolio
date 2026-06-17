@@ -113,3 +113,17 @@ body{
     opacity: .4;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+#home,
+#about,
+#projects,
+#skills,
+#certifications,
+#publications,
+#contact {
+  scroll-margin-top: 90px;
+}

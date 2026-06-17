@@ -7,7 +7,17 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center px-6 relative overflow-hidden"
+      className="
+      min-h-screen
+      relative
+      overflow-hidden
+      pt-24
+      lg:pt-0
+      flex
+      items-center
+      px-4
+      sm:px-6
+      "
     >
       <Particles />
 
@@ -22,8 +32,13 @@ export default function Hero() {
 
       <div
         className="
-        absolute top-0 left-0
-        w-[600px] h-[600px]
+        absolute
+        top-0
+        left-0
+        w-[400px]
+        h-[400px]
+        lg:w-[600px]
+        lg:h-[600px]
         bg-green-500/20
         blur-3xl
         rounded-full
@@ -32,33 +47,95 @@ export default function Hero() {
 
       <div
         className="
-        absolute bottom-0 right-0
-        w-[600px] h-[600px]
+        absolute
+        bottom-0
+        right-0
+        w-[400px]
+        h-[400px]
+        lg:w-[600px]
+        lg:h-[600px]
         bg-emerald-500/20
         blur-3xl
         rounded-full
         "
       />
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center w-full">
-        {/* LEFT */}
+      <div
+        className="
+        max-w-7xl
+        mx-auto
+        w-full
+        grid
+        lg:grid-cols-2
+        gap-8
+        lg:gap-16
+        items-center
+        "
+      >
+        {/* MOBILE PROFILE FIRST */}
+
+        <motion.div
+          initial={{ opacity: 0, x: 120 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="
+          flex
+          justify-center
+          lg:hidden
+          "
+        >
+          <OrbitCard />
+        </motion.div>
+
+        {/* TEXT */}
 
         <motion.div
           initial={{ opacity: 0, x: -120 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
+          className="
+          text-center
+          lg:text-left
+          "
         >
-          <p className="uppercase tracking-[0.4em] text-green-400 text-sm mb-4">
+          <p
+            className="
+            uppercase
+            tracking-[0.3em]
+            text-green-400
+            text-xs
+            sm:text-sm
+            mb-3
+            "
+          >
             Software Developer
           </p>
 
-          <h1 className="text-6xl lg:text-8xl font-black leading-tight">
-            <span className="text-white">Navaneetha</span>
-
-            <br />
+          <h1
+            className="
+            font-black
+            leading-none
+            "
+          >
+            <span
+              className="
+              block
+              text-white
+              text-5xl
+              sm:text-6xl
+              lg:text-8xl
+              "
+            >
+              Navaneetha
+            </span>
 
             <span
               className="
+              block
+              mt-2
+              text-5xl
+              sm:text-6xl
+              lg:text-8xl
               bg-gradient-to-r
               from-green-300
               to-green-500
@@ -70,7 +147,15 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="mt-8 text-2xl text-gray-300">
+          <div
+            className="
+            mt-5
+            text-xl
+            lg:text-2xl
+            text-gray-300
+            min-h-[40px]
+            "
+          >
             <TypeAnimation
               sequence={[
                 "Python Developer",
@@ -84,34 +169,92 @@ export default function Hero() {
             />
           </div>
 
-          <p className="mt-8 text-gray-400 max-w-xl text-lg">
-            Building intelligent software solutions, accessibility
-            platforms, transportation systems, and AI-powered applications.
+          <p
+            className="
+            mt-5
+            text-gray-400
+            text-base
+            lg:text-lg
+            max-w-xl
+            mx-auto
+            lg:mx-0
+            "
+          >
+            Building intelligent software solutions,
+            accessibility platforms,
+            transportation systems,
+            and AI-powered applications.
           </p>
 
-          <div className="flex gap-5 mt-10">
+          <div
+            className="
+            mt-8
+            flex
+            flex-col
+            sm:flex-row
+            gap-4
+            justify-center
+            lg:justify-start
+            relative
+            z-50
+            "
+          >
             <button
+              type="button"
+              onClick={() => {
+                const projectsSection =
+                  document.getElementById("projects");
+
+                if (projectsSection) {
+                  projectsSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }}
               className="
-              px-8 py-4
+              relative
+              z-50
+              px-8
+              py-4
               rounded-2xl
               bg-green-400
               text-black
               font-bold
               hover:scale-105
-              transition
+              transition-all
+              duration-300
+              cursor-pointer
               "
             >
               Explore Work
             </button>
 
             <button
+              type="button"
+              onClick={() => {
+                const contactSection =
+                  document.getElementById("contact");
+
+                if (contactSection) {
+                  contactSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }}
               className="
-              px-8 py-4
+              relative
+              z-50
+              px-8
+              py-4
               rounded-2xl
               border
               border-green-400
               hover:bg-green-400/10
-              transition
+              transition-all
+              duration-300
+              cursor-pointer
               "
             >
               Contact Me
@@ -119,13 +262,17 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* RIGHT */}
+        {/* DESKTOP PROFILE */}
 
         <motion.div
           initial={{ opacity: 0, x: 120 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="flex justify-center"
+          className="
+          hidden
+          lg:flex
+          justify-center
+          "
         >
           <OrbitCard />
         </motion.div>
