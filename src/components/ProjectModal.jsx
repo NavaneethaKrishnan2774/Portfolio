@@ -52,16 +52,19 @@ export default function ProjectModal({
             className="
             w-full
             max-w-5xl
-            max-h-[90vh]
+            h-[95vh]
             overflow-y-auto
             bg-[#0d1117]
             rounded-[30px]
             border
             border-green-400/20
-            p-8
+            p-6
+            sm:p-8
             relative
             "
           >
+            {/* Close Button */}
+
             <button
               onClick={closeModal}
               className="
@@ -76,6 +79,8 @@ export default function ProjectModal({
             >
               <FaTimes size={24} />
             </button>
+
+            {/* Featured Badge */}
 
             {project.featured && (
               <div
@@ -95,67 +100,112 @@ export default function ProjectModal({
               </div>
             )}
 
-            <h2 className="text-4xl font-black">
+            {/* Title */}
+
+            <h2
+              className="
+              text-3xl
+              sm:text-4xl
+              font-black
+              leading-tight
+              "
+            >
               {project.title}
             </h2>
 
-            <p className="text-green-400 mt-2">
+            <p className="text-green-400 mt-3 text-sm sm:text-base">
               {project.category}
             </p>
 
-            <div className="mb-8 mt-8">
-              <img
-                src={
-                  project.images?.[
-                    activeImage
-                  ] || project.image
-                }
-                alt={project.title}
+            {/* Main Image */}
+
+            <div className="mt-8 mb-8">
+              <div
                 className="
                 w-full
-                h-[450px]
-                object-cover
+                bg-black/30
                 rounded-3xl
                 border
                 border-green-400/20
+                overflow-hidden
+                flex
+                justify-center
+                items-center
                 "
-              />
-
-              <div className="flex gap-3 mt-4 overflow-x-auto">
-                {project.images?.map(
-                  (img, index) => (
-                    <img
-                      key={index}
-                      src={img}
-                      alt=""
-                      onClick={() =>
-                        setActiveImage(
-                          index
-                        )
-                      }
-                      className={`
-                        w-24
-                        h-16
-                        object-cover
-                        rounded-xl
-                        cursor-pointer
-                        border
-                        ${
-                          activeImage ===
-                          index
-                            ? "border-green-400"
-                            : "border-green-400/20"
-                        }
-                      `}
-                    />
-                  )
-                )}
+              >
+                <img
+                  src={
+                    project.images?.[
+                      activeImage
+                    ] || project.image
+                  }
+                  alt={project.title}
+                  className="
+                  w-full
+                  h-auto
+                  max-h-[70vh]
+                  object-contain
+                  "
+                />
               </div>
+
+              {/* Thumbnails */}
+
+              {project.images?.length > 1 && (
+                <div
+                  className="
+                  flex
+                  gap-3
+                  mt-4
+                  overflow-x-auto
+                  pb-2
+                  "
+                >
+                  {project.images.map(
+                    (img, index) => (
+                      <img
+                        key={index}
+                        src={img}
+                        alt=""
+                        onClick={() =>
+                          setActiveImage(index)
+                        }
+                        className={`
+                          w-24
+                          h-16
+                          object-cover
+                          rounded-xl
+                          cursor-pointer
+                          border
+                          transition-all
+                          duration-300
+                          ${
+                            activeImage === index
+                              ? "border-green-400 scale-105"
+                              : "border-green-400/20"
+                          }
+                        `}
+                      />
+                    )
+                  )}
+                </div>
+              )}
             </div>
 
-            <p className="mt-6 text-gray-300 leading-8">
+            {/* Description */}
+
+            <p
+              className="
+              text-gray-300
+              leading-8
+              text-sm
+              sm:text-base
+              "
+            >
               {project.fullDescription}
             </p>
+
+            {/* Tech Stack */}
 
             <h3 className="text-2xl font-bold mt-10">
               Tech Stack
@@ -173,6 +223,7 @@ export default function ProjectModal({
                     bg-green-400/10
                     border
                     border-green-400/20
+                    text-green-300
                     "
                   >
                     {tech}
@@ -181,33 +232,45 @@ export default function ProjectModal({
               )}
             </div>
 
+            {/* Features */}
+
             <h3 className="text-2xl font-bold mt-10">
               Features
             </h3>
 
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-3">
               {project.features.map(
                 (item) => (
-                  <li key={item}>
+                  <li
+                    key={item}
+                    className="text-gray-300"
+                  >
                     ✅ {item}
                   </li>
                 )
               )}
             </ul>
 
+            {/* Learnings */}
+
             <h3 className="text-2xl font-bold mt-10">
               Learnings
             </h3>
 
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-3">
               {project.learnings.map(
                 (item) => (
-                  <li key={item}>
+                  <li
+                    key={item}
+                    className="text-gray-300"
+                  >
                     🚀 {item}
                   </li>
                 )
               )}
             </ul>
+
+            {/* GitHub */}
 
             {project.github?.length >
               0 && (
@@ -229,6 +292,8 @@ export default function ProjectModal({
                       bg-green-400
                       text-black
                       font-bold
+                      hover:scale-105
+                      transition
                       "
                     >
                       <FaGithub />
