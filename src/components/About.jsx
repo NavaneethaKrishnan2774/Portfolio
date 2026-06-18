@@ -39,12 +39,11 @@ export default function About() {
         </h2>
 
         <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
-          I am a Computer Science Engineering student passionate about
-          Software Development, Artificial Intelligence, Transportation
-          Systems, and Accessibility Technologies.
+          I am a Computer Science and Engineering graduate focused on building reliable and efficient software solutions. My expertise lies in Python, Django, React.js, and database technologies, with practical experience gained through developing web applications, management systems, and machine learning-based projects.
 
-          My goal is to build impactful products that solve real-world
-          problems through intelligent software systems.
+I enjoy transforming ideas into functional products by combining clean code, structured problem-solving, and modern development practices. From backend architecture and API development to responsive user interfaces, I am committed to creating solutions that deliver both performance and usability.
+
+Currently, I am seeking opportunities to begin my professional journey as a Software Developer, where I can contribute, learn from experienced teams, and grow into a highly skilled engineering professional.
         </p>
       </motion.div>
     </section>

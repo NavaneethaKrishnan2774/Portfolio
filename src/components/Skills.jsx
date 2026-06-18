@@ -16,7 +16,7 @@ const skillCategories = [
   {
     title: "Backend",
     icon: "⚙️",
-    skills: ["Flask", "REST API", "MySQL", "SQLite"],
+    skills: ["Django", "REST API", "MySQL", "SQLite"],
   },
 
   {
@@ -37,15 +37,13 @@ const skillCategories = [
       "DSA",
       "DBMS",
       "OOPS",
-      "OS",
-      "Computer Networks",
     ],
   },
 
   {
     title: "Tools",
     icon: "🛠️",
-    skills: ["Git", "GitHub", "VS Code"],
+    skills: ["Git", "GitHub", "VS Code","Figma", "Power BI", "Docker", "Unity","Vercel"],
   },
 ];
 

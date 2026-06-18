@@ -15,7 +15,7 @@ const timeline = [
     icon: "🧮",
     title: "HSC - Computer Maths",
     description:
-      "Completed higher secondary education with 84.4%. Developed analytical and logical thinking through Computer Mathematics and gained early exposure to programming concepts.",
+      "Completed higher secondary education with 77.5%. Developed analytical and logical thinking through Computer Mathematics and gained early exposure to programming concepts.",
     skills: ["Computer Maths", "Logic", "Programming Basics"]
   },
 
@@ -24,13 +24,12 @@ const timeline = [
     icon: "🎓",
     title: "B.E Computer Science & Engineering",
     description:
-      "P.A. College of Engineering and Technology • Anna University • CGPA 7.69. Developed strong knowledge in software development, database systems, computer networks, operating systems, artificial intelligence, and machine learning.",
+      "P.A. College of Engineering and Technology • Anna University • CGPA 7.69. Developed strong knowledge in software development, database systems, backend development, artificial intelligence and machine learning.",
     skills: [
       "DSA",
       "DBMS",
       "OOPS",
-      "OS",
-      "Computer Networks",
+      "Django",
       "Software Engineering",
       "AI & ML"
     ]

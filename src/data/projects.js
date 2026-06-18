@@ -65,7 +65,7 @@ const projects = [
 
     technologies: [
       "React",
-      "Flask",
+      "Django",
       "MySQL",
       "JavaScript",
       "HTML",
@@ -165,9 +165,9 @@ const projects = [
       "Developed an intelligent transportation management system that automates bus scheduling, route allocation, and timetable generation.",
 
     technologies: [
-      "Python",
-      "Flask",
-      "MySQL",
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
 
     features: [
@@ -215,6 +215,8 @@ const projects = [
       "Scikit-Learn",
       "Pandas",
       "NumPy",
+      "Flask",
+      "SQLite",
     ],
 
     features: [
@@ -349,25 +351,31 @@ const projects = [
       "Developed a responsive frontend application as part of a technical assessment, focusing on clean UI design, reusable components, and user experience.",
 
     technologies: [
-      "React",
-      "JavaScript",
-      "CSS",
-      "HTML",
+      "Python",
+      "Django",
+      "GraphQL",
+      "Graphene",
     ],
 
     features: [
-      "Responsive Design",
-      "Reusable Components",
-      "Modern UI",
+      "GraphQL API Implementation",
+      "CRUD Operations for Shop Management",
+      "Schema & Resolver Development",
+      "Data Validation and Error Handling",
+      "Multiple Contact Information Support",
+      "Django-Graphene Integration"
     ],
 
     learnings: [
-      "Frontend Architecture",
-      "Component Design",
-      "UI Optimization",
+     "GraphQL Query and Mutation Development",
+     "Building APIs with Django and Graphene",
+     "Schema Design and Data Modeling",
+     "Resolver Implementation and Optimization",
+     "Backend Architecture Best Practices",
+     "API Testing and Debugging"
     ],
 
-    github: [],
+    github: ["https://github.com/NavaneethaKrishnan2774/Artspot_assesment"],
   },
   
   {
@@ -398,7 +406,8 @@ const projects = [
     "Tailwind CSS",
     "Framer Motion",
     "JavaScript",
-    "Vite",
+    "React Type Animation",
+    "EmailJS",
   ],
 
   features: [
@@ -418,7 +427,7 @@ const projects = [
   ],
 
   github: [
-    "https://github.com/NavaneethaKrishnan2774",
+    "https://github.com/NavaneethaKrishnan2774/Portfolio",
   ],
     },
 
