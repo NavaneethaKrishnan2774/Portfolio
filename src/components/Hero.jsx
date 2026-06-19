@@ -93,7 +93,7 @@ export default function Hero() {
           <OrbitCard />
         </motion.div>
 
-        {/* TEXT CONTENT */}
+        {/* TEXT */}
         <motion.div
           initial={{ opacity: 0, x: -80 }}
           animate={{ opacity: 1, x: 0 }}
@@ -202,17 +202,12 @@ export default function Hero() {
             gap-4
             justify-center
             lg:justify-start
+            relative
+            z-50
             "
           >
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById("projects")
-                  ?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-              }}
+            <a
+              href="#projects"
               className="
               px-8
               py-4
@@ -223,20 +218,15 @@ export default function Hero() {
               hover:scale-105
               transition-all
               duration-300
+              text-center
+              cursor-pointer
               "
             >
               Explore Work
-            </button>
+            </a>
 
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-              }}
+            <a
+              href="#contact"
               className="
               px-8
               py-4
@@ -246,10 +236,12 @@ export default function Hero() {
               hover:bg-green-400/10
               transition-all
               duration-300
+              text-center
+              cursor-pointer
               "
             >
               Contact Me
-            </button>
+            </a>
           </div>
         </motion.div>
 
