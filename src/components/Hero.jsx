@@ -10,8 +10,8 @@ export default function Hero() {
       className="
       min-h-screen
       relative
-      overflow-hidden
-      pt-24
+      overflow-x-hidden
+      pt-28
       lg:pt-0
       flex
       items-center
@@ -21,6 +21,7 @@ export default function Hero() {
     >
       <Particles />
 
+      {/* Grid Background */}
       <div
         className="
         absolute
@@ -30,13 +31,16 @@ export default function Hero() {
         "
       />
 
+      {/* Left Glow */}
       <div
         className="
         absolute
         top-0
         left-0
-        w-[400px]
-        h-[400px]
+        w-[250px]
+        h-[250px]
+        sm:w-[400px]
+        sm:h-[400px]
         lg:w-[600px]
         lg:h-[600px]
         bg-green-500/20
@@ -45,13 +49,16 @@ export default function Hero() {
         "
       />
 
+      {/* Right Glow */}
       <div
         className="
         absolute
         bottom-0
         right-0
-        w-[400px]
-        h-[400px]
+        w-[250px]
+        h-[250px]
+        sm:w-[400px]
+        sm:h-[400px]
         lg:w-[600px]
         lg:h-[600px]
         bg-emerald-500/20
@@ -67,16 +74,15 @@ export default function Hero() {
         w-full
         grid
         lg:grid-cols-2
-        gap-8
+        gap-12
         lg:gap-16
         items-center
         "
       >
-        {/* MOBILE PROFILE FIRST */}
-
+        {/* MOBILE CARD */}
         <motion.div
-          initial={{ opacity: 0, x: 120 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 80 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="
           flex
@@ -87,10 +93,9 @@ export default function Hero() {
           <OrbitCard />
         </motion.div>
 
-        {/* TEXT */}
-
+        {/* TEXT CONTENT */}
         <motion.div
-          initial={{ opacity: 0, x: -120 }}
+          initial={{ opacity: 0, x: -80 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           className="
@@ -101,28 +106,24 @@ export default function Hero() {
           <p
             className="
             uppercase
-            tracking-[0.3em]
+            tracking-[0.35em]
             text-green-400
             text-xs
             sm:text-sm
-            mb-3
+            mb-4
             "
           >
             Software Developer
           </p>
 
-          <h1
-            className="
-            font-black
-            leading-none
-            "
-          >
+          <h1 className="font-black leading-none">
             <span
               className="
               block
               text-white
               text-5xl
               sm:text-6xl
+              md:text-7xl
               lg:text-8xl
               "
             >
@@ -135,9 +136,11 @@ export default function Hero() {
               mt-2
               text-5xl
               sm:text-6xl
+              md:text-7xl
               lg:text-8xl
               bg-gradient-to-r
               from-green-300
+              via-green-400
               to-green-500
               bg-clip-text
               text-transparent
@@ -149,11 +152,11 @@ export default function Hero() {
 
           <div
             className="
-            mt-5
+            mt-6
             text-xl
-            lg:text-2xl
+            sm:text-2xl
             text-gray-300
-            min-h-[40px]
+            min-h-[50px]
             "
           >
             <TypeAnimation
@@ -164,6 +167,8 @@ export default function Hero() {
                 2000,
                 "Full Stack Developer",
                 2000,
+                "Backend Developer",
+                2000,
               ]}
               repeat={Infinity}
             />
@@ -171,50 +176,44 @@ export default function Hero() {
 
           <p
             className="
-            mt-5
+            mt-6
             text-gray-400
             text-base
-            lg:text-lg
+            sm:text-lg
             max-w-xl
             mx-auto
             lg:mx-0
+            leading-8
             "
           >
             Building intelligent software solutions,
-            accessibility platforms,
+            academic management platforms,
             transportation systems,
             and AI-powered applications.
           </p>
 
+          {/* BUTTONS */}
           <div
             className="
-            mt-8
+            mt-10
             flex
             flex-col
             sm:flex-row
             gap-4
             justify-center
             lg:justify-start
-            relative
-            z-50
             "
           >
             <button
               type="button"
               onClick={() => {
-                const projectsSection =
-                  document.getElementById("projects");
-
-                if (projectsSection) {
-                  projectsSection.scrollIntoView({
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({
                     behavior: "smooth",
-                    block: "start",
                   });
-                }
               }}
               className="
-              relative
-              z-50
               px-8
               py-4
               rounded-2xl
@@ -224,7 +223,6 @@ export default function Hero() {
               hover:scale-105
               transition-all
               duration-300
-              cursor-pointer
               "
             >
               Explore Work
@@ -233,19 +231,13 @@ export default function Hero() {
             <button
               type="button"
               onClick={() => {
-                const contactSection =
-                  document.getElementById("contact");
-
-                if (contactSection) {
-                  contactSection.scrollIntoView({
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({
                     behavior: "smooth",
-                    block: "start",
                   });
-                }
               }}
               className="
-              relative
-              z-50
               px-8
               py-4
               rounded-2xl
@@ -254,7 +246,6 @@ export default function Hero() {
               hover:bg-green-400/10
               transition-all
               duration-300
-              cursor-pointer
               "
             >
               Contact Me
@@ -262,10 +253,9 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* DESKTOP PROFILE */}
-
+        {/* DESKTOP CARD */}
         <motion.div
-          initial={{ opacity: 0, x: 120 }}
+          initial={{ opacity: 0, x: 80 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           className="

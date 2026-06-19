@@ -130,3 +130,14 @@ body {
 #contact {
   scroll-margin-top: 90px;
 }
+
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
