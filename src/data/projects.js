@@ -38,6 +38,12 @@ import travel4 from "../assets/projects/travel4.png";
 
 import clock1 from "../assets/projects/clock1.png";
 import clock2 from "../assets/projects/clock2.png";
+
+import sales1 from "../assets/projects/sales1.png";
+import sales2 from "../assets/projects/sales2.png";
+
+import vehicle1 from "../assets/projects/vehicle1.png";
+import vehicle2 from "../assets/projects/vehicle2.png";
 const projects = [
   {
     id: 1,
@@ -143,53 +149,8 @@ const projects = [
     ],
   },
 
-  {
+   {
     id: 3,
-
-    title: "Bus Scheduling System",
-
-    category: "🚌 Transportation Technology",
-
-    image: vandibond1,
-
-    images: [
-      vandibond1,
-      vandibond2,
-      vandibond3,
-    ],
-
-    description:
-      "Intelligent transportation management platform.",
-
-    fullDescription:
-      "Developed an intelligent transportation management system that automates bus scheduling, route allocation, and timetable generation.",
-
-    technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-    ],
-
-    features: [
-      "Route Allocation",
-      "Schedule Generation",
-      "Bus Management",
-      "Resource Optimization",
-    ],
-
-    learnings: [
-      "System Design",
-      "Database Design",
-      "Optimization Concepts",
-    ],
-
-    github: [
-      "https://github.com/NavaneethaKrishnan2774/KRYZEN",
-    ],
-  },
-
-  {
-    id: 4,
 
     title: "Twitter Bot Detection",
 
@@ -236,6 +197,53 @@ const projects = [
     ],
   },
 
+
+  {
+    id: 4,
+
+    title: "Bus Scheduling System",
+
+    category: "🚌 Transportation Technology",
+
+    image: vandibond1,
+
+    images: [
+      vandibond1,
+      vandibond2,
+      vandibond3,
+    ],
+
+    description:
+      "Intelligent transportation management platform.",
+
+    fullDescription:
+      "Developed an intelligent transportation management system that automates bus scheduling, route allocation, and timetable generation.",
+
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+    ],
+
+    features: [
+      "Route Allocation",
+      "Schedule Generation",
+      "Bus Management",
+      "Resource Optimization",
+    ],
+
+    learnings: [
+      "System Design",
+      "Database Design",
+      "Optimization Concepts",
+    ],
+
+    github: [
+      "https://github.com/NavaneethaKrishnan2774/KRYZEN",
+    ],
+  },
+
+ 
   {
     id: 5,
 
@@ -330,8 +338,106 @@ const projects = [
   github: [],
 },
 
+{
+  id: 7,
+
+  title: "Sales Performance Analytics Dashboard",
+
+  category: "📊 Power BI & Business Intelligence",
+
+  image: sales1,
+
+  images: [
+    sales1,
+    sales2
+  ],
+
+  featured: true,
+
+  description:
+    "Interactive Power BI dashboard for automobile sales performance and business analytics.",
+
+  fullDescription:
+    "Developed a Power BI dashboard to analyze automobile sales performance, revenue trends, dealership efficiency, customer demographics, and manufacturer-wise sales. Implemented KPI cards, interactive slicers, regional analysis, and dynamic visualizations to support business intelligence and decision-making.",
+
+  technologies: [
+    "Power BI",
+    "DAX",
+    "Power Query",
+    "Excel",
+    "Business Intelligence"
+  ],
+
+  features: [
+    "Revenue Tracking",
+    "Dealer Region Analysis",
+    "Manufacturer Insights",
+    "Customer Analytics",
+    "Interactive Filters",
+    "Sales Trend Analysis"
+  ],
+
+  learnings: [
+    "Power BI Reporting",
+    "DAX Calculations",
+    "Data Transformation",
+    "Business Intelligence Concepts"
+  ],
+
+  github: []
+},
+
+{
+  id: 8,
+
+  title: "Vehicle Registration & Market Intelligence Dashboard",
+
+  category: "🚗 Power BI Analytics",
+
+  image: vehicle1,
+
+  images: [
+    vehicle1,
+    vehicle2
+  ],
+
+  featured: true,
+
+  description:
+    "Power BI dashboard for vehicle registration analytics, market trends, and manufacturer insights.",
+
+  fullDescription:
+    "Built a comprehensive Power BI dashboard to analyze vehicle registration trends, state-wise market distribution, manufacturer performance, and vehicle category insights. Integrated interactive maps, KPI indicators, and advanced filtering mechanisms to deliver actionable business intelligence.",
+
+  technologies: [
+    "Power BI",
+    "DAX",
+    "Power Query",
+    "Excel",
+    "Business Analytics"
+  ],
+
+  features: [
+    "Vehicle Registration Tracking",
+    "Geographic Market Analysis",
+    "Manufacturer Insights",
+    "Vehicle Type Analytics",
+    "Interactive Maps",
+    "Trend Visualization"
+  ],
+
+  learnings: [
+    "Power BI Mapping",
+    "Business Analytics",
+    "Dashboard Storytelling",
+    "Market Intelligence"
+  ],
+
+  github: []
+},
+
   {
-    id: 7,
+    id: 9,
 
     title: "ArtSpot Technical Assessment",
 
@@ -379,7 +485,7 @@ const projects = [
   },
   
   {
-  id: 8,
+  id: 10,
 
   title: "Personal Portfolio",
 
@@ -432,7 +538,7 @@ const projects = [
     },
 
     {
-  id: 9,
+  id: 11,
 
   title: "AR/VR Analog Clock",
 
@@ -477,6 +583,8 @@ const projects = [
 
   github: [],
 },
+
+
 
 
 

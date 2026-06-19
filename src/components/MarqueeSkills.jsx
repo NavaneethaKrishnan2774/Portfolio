@@ -11,6 +11,7 @@ import figma from "../assets/skills/figma.png";
 import powerbi from "../assets/skills/powerbi.jpg";
 import unity from "../assets/skills/unity.png";
 import vscode from "../assets/skills/vs code.jpg";
+import vercel from "../assets/skills/vercel.png";
 
 const skills = [
   { name: "Python", icon: python },
@@ -26,6 +27,7 @@ const skills = [
   { name: "Power BI", icon: powerbi },
   { name: "Unity", icon: unity },
   { name: "VS Code", icon: vscode },
+  { name: "Vercel", icon: vercel },
 ];
 
 export default function MarqueeSkills() {
